@@ -42,6 +42,9 @@
 
 <script setup>
 
+onBeforeMount(async () => {
+   await getData()
+})
 onMounted(async () => {
   await  getData()
     console.log('beforeeeeeeeeee',topAnime.value);
@@ -49,14 +52,15 @@ onMounted(async () => {
 
 
 const topAnime = ref([])
+const response = ref([])
 
 
 async function getData() {
     try {
-        // const { data, error } = await useFetch('https://api.jikan.moe/v4/seasons/now')
-        // if (data.value) {
-        //     response.value = data.value.data
-        // }
+        const { data, error } = await useFetch('https://api.jikan.moe/v4/seasons/now')
+        if (data.value) {
+            response.value = data.value.data
+        }
 
         
         const res=await useFetch('https://api.jikan.moe/v4/top/anime')
