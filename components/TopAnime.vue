@@ -6,6 +6,7 @@
             <!-- {{ item?.images?.webp }} -->
              <img :src="item?.images?.webp?.image_url" class="lable" :alt="item?.title" @click="goAnimePage(item)"> 
             </span>
+
         </div>
     </div>
 </template>
@@ -28,6 +29,10 @@ const onlyFirstFew = computed(() => {
     return TopAnime?.value.slice(0,9)
 })
 
+const router = useRouter()
+const goAnimePage = (anime)=>{
+    router.push(`/anime/${anime.mal_id}`)
+}
 </script>
 
 <style  scoped>
