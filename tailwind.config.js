@@ -9,7 +9,18 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      container:{
+        center:true,
+        padding:'2rem'
+      },
+      inset:{
+        '18':'4.5rem'
+      },
+      width:{
+        '22':'5.5rem'
+      }
+    },
   },
   plugins: [],
 }
