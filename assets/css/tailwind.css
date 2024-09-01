@@ -5,3 +5,16 @@
 [x-cloak]{
     display: none !important;
 }
+
+.custom-input{
+    @apply w-full rounded-full border border-gray-300 shadow-glass h-10 bg-transparent focus:outline-none pl-10;
+}
+.custom-label{
+    @apply text-base font-medium text-gray-800;
+}
+.btn{
+    @apply flex justify-center items-center rounded-3xl h-10 mt-8 text-white text-base font-medium shadow-lg;
+}
+.modal-btn{
+    @apply flex justify-center items-center rounded-xl h-10 text-white text-sm font-medium shadow-lg;
+}
