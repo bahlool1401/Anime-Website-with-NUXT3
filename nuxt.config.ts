@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   ssr: false,
   css: ["/assets/css/tailwind.css"],
 
+  
   app: {
     head: {
       script: [
